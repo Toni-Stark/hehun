@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>在线生辰合婚、生辰生辰合婚、生辰姻缘配对合婚</title>
+    <link rel="stylesheet" href="/statics/css/index.css"/>
+    <!-- ks-trace -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- end ks-trace -->
+
+    <style>
+        blockquote, body, button, code, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, section, select, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            max-width: 100vw;
+            background: #f9f3eb;
+            display: flex;
+            justify-content: center;
+        }
+        body, #app {
+            width: 100%;
+            max-width: 640px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+        .header_box {
+            width: 100%;
+            height: 77vw;
+            max-width: 640px;
+            max-height: 480px;
+        }
+        .header {
+            width: 100%;
+            height: 100%;
+            background: url(/statics/img/21791647507481_.pic_hd.jpg) no-repeat;
+            background-size: 100% 100%;
+            overflow: hidden;
+        }
+        section {
+            position: relative;
+            padding: 0 10px;
+            background: #ffe7f1;
+            overflow: hidden;
+        }
+        .text_p {
+            font-size: 0.88rem;
+            text-align: center;
+            color: #525252;
+            padding: 15px 0;
+        }
+        .input_box_content {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: #ffffff;
+            border-radius: 5px;
+        }
+        .input_box_content input {
+            width: 100%;
+            height: 10vw;
+            max-height: 60px;
+            border: none;
+        }
+        .input_icons {
+
+        }
+        .input_icons img {
+            width: 10vw;
+            max-width: 63px;
+            height: 100%;
+            max-height: 63px;
+            display: flex;
+        }
+        .text_content {
+            padding: 0 10px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #838280;
+            white-space: nowrap;
+        }
+        .agreement {
+            width: 100%;
+        }
+        .agree-text {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .button_box__ {
+            width: 90%;
+            height: 12.4vw;
+            max-height: 70px;
+            /* background: url(http://cdn.zhiyileiju.cn/WechatIMG460.jpeg); */
+            background-size: 100% 100%;
+            background-color: rgb(196, 57, 62);
+            border-radius: 40px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #fff;
+            font-size: 2.2333vw;
+            border: none;
+            font-weight: 500;
+            letter-spacing: 0.1333rem;
+            text-align: center;
+            box-shadow: -0.1333vw 1vw 1.8667vw -0.8vw rgb(245 118 60);
+            /* background: linear-gradient(to bottom, #599bb3 5%, rgb(196,57,62) 100%); */
+            text-align: -webkit-center;
+            -webkit-animation-name: myfirst-data;
+            animation-name: myfirst-data;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @keyframes myfirst-data {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+        .message_box {
+            position: relative;
+            margin: 0 auto;
+            border: 1px solid #525252;
+            width: 100%;
+            max-height: 260px;
+            overflow-y: hidden;
+            margin-top: 20px;
+        }
+        .message_box ul li {
+            padding-bottom: 1rem;
+            list-style: none;
+        }
+        .img_box__ {
+            background: #ffe7f1;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .img_box__ img {
+            margin-top: 15px;
+            width: 100%;
+        }
+        .public_btn_b {
+            width: 70%;
+        }
+        .animation_scaling {
+        }
+        .img_box__ .input {
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 80%;
+            bottom: 35vw;
+            max-height: 45px;
+            border: 0.1333vw solid #e15757;
+            margin: auto;
+            height: 8.5333vw;
+            border-radius: 1.5vw;
+            z-index: 9999;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .img_box__ .input input {
+            font-size: 1.5vw;
+            color: #838280;
+            width: 80%;
+            height: 6vw;
+            border: none;
+        }
+        .img_box__ .input img {
+            margin: 0;
+            width: 5vw;
+            height: 6vw;
+        }
+
+        .good_reputation_box_ {
+            position: relative;
+            margin-bottom: 6vw;
+            background: url(statics/img/WechatIMG737.png) no-repeat;
+            background-size: 100% 100%;
+            padding-top: 5.2vw;
+        }
+        .text_h1__ {
+            text-align: center;
+            font-size: 5.0667vw;
+            font-family: Microsoft YaHei;
+            font-weight: 700;
+            color: #d74a50;
+            margin-bottom: 4.8vw;
+        }
+        .text_c {
+            padding-bottom: 4.6667vw;
+            margin: 0vw 2.9333vw;
+        }
+        .row {
+            padding: 0 0.4vw;
+        }
+        .col {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .van-col--8 {
+            width: 33.33333333%;
+        }
+        .van-col {
+            float: left;
+            box-sizing: border-box;
+            min-height: 1px;
+        }
+        .tag {
+            text-align: center;
+            width: 26.6667vw;
+            display: inline-block;
+            border: 1px solid #c91c18;
+            border-radius: 0.6667vw;
+            font-size: 3.2vw;
+            color: #c91c18;
+            padding: 0.9333vw 0.5333vw;
+            margin-bottom: 1.3333vw;
+        }
+        .van-row:after {
+            display: table;
+            clear: both;
+            content: "";
+        }
+        .comment {
+            margin: 5px 0;
+        }
+        .commentscrollbox {
+            overflow: hidden;
+            height: 120vw;
+        }
+        .scrollbox-2 {
+            height: 120vw;
+            overflow: hidden;
+        }
+        .commentlist {
+            padding: 2.6667vw;
+        }
+        .commentlist li {
+            border-bottom: 1px dotted #979797;
+            margin-bottom: 1.8333vw;
+            list-style: none;
+        }
+        .nameheader {
+            display: flex;
+        }
+        .nameheader img {
+            width: 7.6667vw;
+            height: 7.6667vw;
+            border-radius: 50%;
+            margin-right: 1.3333vw;
+        }
+        .nameheader p {
+            padding: 0;
+            margin: 0;
+            font-size: 2.6667vw;
+            color: #020202;
+        }
+        .nameheader .time {
+            font-size: 1.6vw;
+            color: #979797;
+        }
+        .commentpicbox {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+        .commentfooter, .likebox {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 5px;
+        }
+        .lookbox {
+            color: #979797;
+            font-size: 12px;
+        }
+        .likebox img {
+            width: 2.7333vw;
+            margin-right: 0.6667vw;
+        }
+        .long {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="shade">
+    </div>
+    <div id="shade1">
+    </div>
+    <div id="app">
+        <div class="header_box" style="width: 100%">
+            <div class="header" id="agentTitle"></div>
+        </div>
+        <div>
+            <section>
+                <p class="text_p">
+                    男女配不配 用名字
+                    <span>9s</span>
+                    测出契合度
+                </p>
+                <div class="input_box">
+                    <div class="input_box_content man_input" style="margin-bottom: 15px">
+                        <div class="input_icons">
+                            <img src="/statics/img/WechatIMG457.png" alt="">
+                        </div>
+                        <div class="text_content">男方姓名</div>
+                        <input type="text" placeholder="请输入姓名" class="input_color" id="username" name="username">
+                    </div>
+                    <div class="input_box_content girl_input">
+                        <div class="input_icons">
+                            <img src="/statics/img/WechatIMG459.png" alt="">
+                        </div>
+                        <div class="text_content">女方姓名</div>
+                        <input type="text" placeholder="请输入姓名" class="input_color" id="girl_username" name="girl_username" value="">
+                    </div>
+                </div>
+                <div class="agreement">
+                    <div class="agree-text">
+                        <input type="checkbox" class="van-checkbox" />
+                        <span class="van-checkbox__label">
+                            <p class="text_p" style="margin-left: 5px">同意保护</p>
+                        </span>
+                        <a href="javascript:;" id="protocolShowBtn" class="text_p"> &lt;隐私协议&gt; </a>
+                    </div>
+                    <div class="public_btn_s">
+                        <input type="submit" class="btn-submit J_ajax_submit_btnsub button_box__" value="马上测算">
+                    </div>
+                </div>
+                <p class="text_p">
+                    -已为
+                    <span style="color: rgb(196, 57, 62)">789, 316</span>
+                    人测试, 准确率很高-
+                </p>
+                <div class="message_box" id="parent">
+                    <div class="warp">
+                        <div class="list_lh">
+                            <ul style="margin-top: -25.5px;">
+                                <li>
+                                    <span>8秒前</span>
+                                    <span>安徽</span>
+                                    <span>孙*亚</span>
+                                    <span>成功获取测试结果</span>
+                                </li><li>
+                                <span>8秒前</span>
+                                <span>安徽</span>
+                                <span>孙*亚</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>8秒前</span>
+                                <span>安徽</span>
+                                <span>孙*亚</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>8秒前</span>
+                                <span>安徽</span>
+                                <span>孙*亚</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>56秒前</span>
+                                <span>江西</span>
+                                <span>孙*嘉</span>
+                                <span>正在填写姓名</span>
+                            </li><li>
+                                <span>3分钟前</span>
+                                <span>贵州</span>
+                                <span>王辰*</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>18分钟前</span>
+                                <span>安徽</span>
+                                <span>王怡*</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>46秒前</span>
+                                <span>四川</span>
+                                <span>孙瑾*</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>25分钟前</span>
+                                <span>海南</span>
+                                <span>王雪*</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>47秒前</span>
+                                <span>陕西</span>
+                                <span>赵*安</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>8秒前</span>
+                                <span>安徽</span>
+                                <span>孙*亚</span>
+                                <span>成功获取测试结果</span>
+                            </li><li>
+                                <span>8秒前</span>
+                                <span>安徽</span>
+                                <span>孙*亚</span>
+                                <span>成功获取测试结果</span>
+                            </li></ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div>
+            <div class="img_box__">
+                <img src="/statics/img/weiChatCard1.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="img_box__">
+                <img src="/statics/img/weiChatCard2.png" alt="">
+                <div class="public_btn_b" style="margin-top: -50px">
+                    <input type="submit" class="animation_scaling button_box__" value="我要配对">
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="img_box__">
+                <img src="/statics/img/weiChatCard3.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="img_box__">
+                <img src="/statics/img/weiChatCard4.png" alt="">
+            </div>
+        </div>
+        <div>
+            <div class="img_box__">
+                <img src="/statics/img/weiChatCard4.png" alt="">
+                <div class="input">
+                    <input type="text" placeholder="请输入姓名查看配对结果">
+                    <img src="/statics/img/dj.png" alt="">
+                </div>
+            </div>
+        </div>
+        <div class="good_reputation_box_">
+            <h1 class="text_h1__">2022版姓名配对 好评如潮</h1>
+            <div class="text_c">
+                <div class="commentbox">
+                    <div class="row van-row">
+                        <div class="col van-col van-col--8">
+                            <span class="tag">分析很好(10.1万)</span>
+                        </div>
+                        <div class="col van-col van-col--8">
+                            <span class="tag">很专业(3.1万)</span>
+                        </div>
+                        <div class="col van-col van-col--8">
+                            <span class="tag">脱单必备(1.2万)</span>
+                        </div>
+                    </div>
+                    <div class="row van-row">
+                        <div class="col van-col van-col--8">
+                            <span class="tag">算得很准(4.1万)</span>
+                        </div>
+                        <div class="col van-col van-col--8">
+                            <span class="tag">有依据(2.5万)</span>
+                        </div>
+                        <div class="col van-col van-col--8">
+                            <span class="tag">非常正规(1.1万)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="commentscrollbox">
+                    <div class="warp">
+                        <div class="scrollbox-2">
+                            <ul class="commentlist" style="margin-top: -40.5px;">
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/10a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">谭艳屏</p>
+                                            <p class="time">51分钟前</p>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        我测试了一下说我桃花较旺，建议我不要盲目去谈恋爱，要提高我的择偶标准，最终可以找到一个更好更适合的人，谢谢老师，我会的。
+                                    </p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览28657次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>16657</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/9a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">小珍子</p>
+                                            <p class="time">46分钟前</p>
+                                        </div>
+                                     </div>
+                                    <p class="comment">
+                                        这里的老师都很专业，我发现他们讲的也真的是有理有据，不得不佩服。
+                                    </p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览23876次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>14765</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/8a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">黄吟兰</p>
+                                            <p class="time">46分钟前</p>
+                                        </div>
+                                    </div>
+                                    <p class="comment">这个婚姻测试是很正规的。</p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览21876次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>12865</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/5a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">龙亮臻Leon</p>
+                                            <p class="time">34分钟前</p>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        一定要好评！好评！在这里我测试的对象简直和我现实中刚认识的特别想象，我真是不敢相信，我一定会听信老师的建议，好好的珍惜这段感情，幸福美满的生活下去。
+                                    </p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览19234次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>8675</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/4a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">静子</p>
+                                            <p class="time">19分钟前</p>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        妈妈催我找朋友，我比较内向不知道该如何做，在婚姻测试里专业老师不仅对我的性格分析的很详细，还给了我很好的建议，非常感谢老师。
+                                    </p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览18968次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>7564</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/4a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">静子</p>
+                                            <p class="time">19分钟前</p>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        妈妈催我找朋友，我比较内向不知道该如何做，在婚姻测试里专业老师不仅对我的性格分析的很详细，还给了我很好的建议，非常感谢老师。
+                                    </p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览18968次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>7564</span>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="nameheader">
+                                        <img src="/statics/img/4a.png" alt="">
+                                        <div class="long">
+                                            <p class="nickname">静子</p>
+                                            <p class="time">19分钟前</p>
+                                        </div>
+                                    </div>
+                                    <p class="comment">
+                                        妈妈催我找朋友，我比较内向不知道该如何做，在婚姻测试里专业老师不仅对我的性格分析的很详细，还给了我很好的建议，非常感谢老师。
+                                    </p>
+                                    <div class="commentpicbox"></div>
+                                    <div class="commentfooter">
+                                        <span class="lookbox">浏览18968次</span>
+                                        <div class="likebox">
+                                            <img src="/statics/img/zan.png" alt="">
+                                            <span>7564</span>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="input_box">
+            <div class="input_box_content man_input">
+                <i class="icons">
+                    <img src="/statics/ffsm/new/img/WechatIMG457.png" alt="">
+                </i>
+
+                <form class="J_ajaxForm" action="/?ac=hehun" method="post" id="submit2" name="login1" onsubmit="return checkForm();">
+                    <span class="text_content">男方姓名</span>
+                    <input type="text" placeholder="请输入姓名" class="input_color" id="username" name="username">
+                </form></div>
+            <div class="input_box_content girl_input">
+                <i class="icons">
+                    <img src="/statics/ffsm/new/img/WechatIMG459.png" alt="">
+                </i>
+                <span class="text_content">女方姓名</span>
+                <input type="text" placeholder="请输入姓名" class="input_color" id="girl_username" name="girl_username">
+            </div>
+            <span class="text_p" style="
+                    display: flex;
+                    justify-content: center;
+                    margin-top: -1.333vw;
+                  ">
+                  <div role="checkbox" class="van-checkbox" style="margin-top: 4.5333vw">
+                    <div class="van-checkbox__icon van-checkbox__icon--square" style="font-size: 4vw">
+                      <i class="van-icon van-icon-success"></i>
+                    </div>
+                    <span class="van-checkbox__label">
+                      <p class="text_p" style="margin-top: 0">同意保护</p>
+                    </span>
+                  </div>
+                  <span class="text_p"> &lt;隐私协议&gt; </span>
+                </span>
+            <input class="button_box__" type="submit" value="马上测算">
+
+
+            <p class="text_p">
+                -已为
+                <span style="color: rgb(196, 57, 62)">789, 316</span>
+                人测试, 准确率很高-
+            </p>
+        </div>
+    </div>
+</body>
+
+<script src="/statics/js/jquery.min.js"></script>
+<script>
+</script>
+
+
+</html>
