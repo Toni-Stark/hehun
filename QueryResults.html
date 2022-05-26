@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            font: 14px/1.4 "Microsoft Yahei",Arial,Helvetica,sans-serif;
+            margin: 0 auto;
+            max-width: 640px;
+            background-color: #e13634;
+        }
+        .public_header {
+            height: 0.9rem;
+            line-height: 0.9rem;
+            background: #ee4d4c;
+            width: 100%;
+            position: relative;
+        }
+        .public_h_con {
+            text-align: center;
+            margin: 0;
+            font-size: 0.32rem;
+            color: #ffffff;
+        }
+        .mui-group-title {
+            color: #fffde6;
+            font-size: 17px;
+            display: block;
+            text-align: center;
+            height: 50px;
+            line-height: 50px;
+        }
+        .public_form_wrap {
+            margin: 0;
+            background-color: #fffde6;
+        }
+        .public_form_wrap ul {
+            border: 1px solid #cecece;
+            border-radius: 5px;
+            padding: 0;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+        }
+        .public_form_wrap li {
+            border-bottom: 1px solid #cecece;
+            padding: 0 5px;
+            height: 40px;
+            display: flex;
+            line-height: 40px;
+        }
+        .public_form_wrap .left {
+            color: #dd3738;
+            margin-right: 10px;
+            font-size: 16px;
+            min-width: 64px;
+            margin-left: 5px;
+        }
+        .public_form_wrap .auto, .public_tab li {
+            position: relative;
+            height: 40px;
+            line-height: 40px;
+            width: 87%;
+        }
+        .public_form_wrap .sex span {
+            padding: 0 8px;
+        }
+        .public_form_wrap .sex font {
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            border: 1px solid #5c5c5c;
+            background-color: #ffffff;
+            text-align: center;
+            color: #666;
+            line-height: 24px;
+            font-size: 14px;
+        }
+        .public_form_wrap .auto input.bg_no {
+            background-image: none;
+            border: none;
+        }
+        .public_form_wrap .sex span.cur font {
+            color: #fff;
+            background-color: #9d2e41;
+            border: 1px solid #a61222;
+        }
+        .public_form_wrap .auto input {
+            background-color: transparent;
+            background-image: url(./statics/public/icon_down.png);
+        }
+        .Js_date {
+            border: none;
+            width: 100%;
+        }
+        .public_form_wrap .auto .Js_date, .public_form_wrap .auto input {
+            background-color: transparent;
+            background-position: right;
+            background-image: url(./statics/public/icon_date.png);
+            background-repeat: no-repeat;
+        }
+        .public_form_wrap .auto input {
+            display: block;
+            padding: 5px 30px 5px 0;
+            box-sizing: border-box;
+            font-size: 0.24rem;
+            height: 40px;
+            line-height: 40px;
+        }
+        .J_ajax_submit_btnsub {
+            font-size: 20px;
+            color: #fffde6;
+            height: 35px;
+            line-height: 30px;
+            background-color: #9d2e41;
+            text-align: center;
+            display: block;
+            width: 100%;
+            border: none;
+            padding-bottom: 10px;
+            border-radius: 5px;
+        }
+        .lunpan {
+            width: 170px;
+            height: 170px;
+            margin: 0 auto;
+            position: fixed;
+            top: 40%;
+            left: 50%;
+            z-index: 105;
+            margin-left: -85px;
+            vertical-align: middle;
+        }
+        .lunpan img:nth-of-type(1) {
+            width: 170px;
+            height: 170px;
+            -webkit-animation: rotate 4s linear infinite;
+            animation: rotate 4s linear infinite;
+        }
+        .lunpan img:nth-of-type(2) {
+            width: 20px;
+            height: 140px;
+            position: fixed;
+            top: 42%;
+            left: 50%;
+            margin: 0 auto;
+            margin-left: -10px;
+            animation: rotate2 4s linear infinite;
+        }
+        .lunpan_color {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            left: 0;
+            top: 0;
+            z-index: 100;
+            opacity: .7;
+            background-color: #000;
+            transition: opacity .5s;
+        }
+        .detail_lunpan_color {
+            color: #FFF;
+            text-align: center;
+            position: fixed;
+            top: 70%;
+            left: 50%;
+            width: 200px;
+            margin-left: -100px;
+            z-index: 110;
+        }
+        .footer_severs {
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            color: #6c6c6c;
+            padding-bottom: 60px;
+            padding-top: 16px;
+            font-size: 14px;
+            background-color: #fffdf1;
+        }
+
+    </style>
+</head>
+<body>
+    <header class="public_header" id="submit2">
+        <h1 class="public_h_con">虎年运势详批</h1>
+    </header>
+    <div class="container J_testFixedTop" id="container">
+        <div class="wrapper" id="wrapper" style="overflow: auto;">
+            <section id="page-index">
+                <section data-reactroot="">
+                    <div id="index-scroll-box">
+                        <img style="width: 100%;" src="./statics/public/banner_v41.png" alt="banner">
+                        <div class="introTeacher">
+                            <div class="public_bg_color">
+                                <label class="mui-group-title">输入信息查看您的未来运势</label>
+                                <form class="J_ajaxForm J_testFixedShow" id="submit1" action="?ac=jinnian" name="login" method="post" onsubmit="return checkForm();">
+                                    <div class="public_form_wrap" id="miaodian">
+                                        <ul>
+                                            <li>
+                                                <div class="left">
+                                                    你的姓名
+                                                </div>
+                                                <div class="auto">
+                                                    <input type="text" class="bg_no" id="username" name="username" placeholder="请输入名字（必须汉字）" value="">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    你的性别
+                                                </div>
+                                                <div class="auto sex sex J_sex">
+                                                    <span class="gdm" data-value="1"><font>男</font></span><span class="cur" data-value="0"><font>女</font></span><input type="hidden" name="gender" value="0">
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="left">
+                                                    出生日期
+                                                </div>
+                                                <div class="auto">
+                                                    <input type="text" id="birthday" data-input-id="b_input" class="Js_date" data-type="0" value="" placeholder="请选择出生日期" data-toid-hour="birthday" data-date="2022-1-1">
+                                                </div>
+                                            </li>
+
+                                            <input type="hidden" name="h" class="auto input J-time" id="j_dd" value="">
+                                            <input type="hidden" name="y" value="0">
+                                            <input type="hidden" name="m" value="0">
+                                            <input type="hidden" name="d" value="0">
+
+                                            <input type="hidden" name="i" value="0">
+                                            <input type="hidden" name="cY" value="">
+                                            <input type="hidden" name="cM" value="">
+                                            <input type="hidden" name="cD" value="">
+                                            <input type="hidden" name="cH" value="">
+                                            <input type="hidden" name="term1" value="">
+                                            <input type="hidden" name="term2" value="">
+                                            <input type="hidden" name="start_term" value="">
+                                            <input type="hidden" name="end_term" value="">
+                                            <input type="hidden" name="start_term1" value="">
+                                            <input type="hidden" name="end_term1" value="">
+                                            <input type="hidden" name="lDate" value="">
+
+                                        </ul>
+                                    </div>
+                                    <div class="submit J_testFixedShow">
+                                        <input type="button" value="立即测算" class="J_ajax_submit_btnsub">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class="lunpan_box" style="display:none;">
+                    <div class="lunpan">
+                        <img src="statics/public/luopan.png" alt="轮盘">
+                        <img src="statics/public/zhizheng.png" alt="轮盘">
+                    </div>
+                    <div class="lunpan_color"></div>
+                    <span class="detail_lunpan_color">大师努力掐算中 请稍后...</span>
+                </div>
+                <script>
+                    let vanButtonYes = document.getElementsByClassName("J_ajax_submit_btnsub")[0];
+                    let lunpanBox = document.getElementsByClassName("lunpan_box")[0];
+                    console.log(lunpanBox);
+                    vanButtonYes.addEventListener("click", (e) => {
+                        console.log("点击")
+                        lunpanBox.style.display = "block";
+                        setTimeout(()=> {
+                            lunpanBox.style.display = "none";
+                        }, 2000)
+                    })
+                </script>
+
+                <div class="public_hot_test">
+                    <div class="zcdgbox"><a href="javascript:void(0)" class="back_top" id="back_top" style="display: inline-block;"></a>
+                    </div>
+                </div>
+                <script type="text/javascript">
+                    function _resize() {
+                        var html = document.getElementsByTagName('html')[0];
+                        var hW = html.offsetWidth > 750 ? 750 : html.offsetWidth;
+                        var fS = 100 / 750 * hW;
+                        html.style.fontSize = fS + "px"
+                    }
+
+                    _resize();
+                    window.onresize = function () {
+                        _resize();
+                    };
+                </script>
+                <footer class="footer_severs">
+                    <p>在线服务时间: 周一至周五9:00-18:00</p>
+                    <p>武汉道森梯媒文化传播有限公司</p>
+                    <p>地址：武汉市武昌区徐东大街168号</p>
+                    <p>电话：18181818181</p>
+                </footer>
+            </section></div></div>
+</body>
+</html>

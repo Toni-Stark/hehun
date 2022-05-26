@@ -1,0 +1,710 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        html{
+            background: #ffeaea url(statics/pairing/mainbg1.jpg);
+            background-size: contain;
+            font-size: 100px;
+        }
+        body{
+            max-width: 750px;
+            margin: 0 auto;
+            background: #ffeff6;
+            font: 12px/1.4 "Microsoft Yahei",Arial,Helvetica,sans-serif;
+        }
+        .public_banner, .public_banner img {
+            width: 100%;
+            height: auto;
+        }
+        .public_banner, .public_banner img {
+            width: 100%;
+            height: auto;
+        }
+
+        .order_code {
+            padding: 0.2rem 0.16rem;
+            font-size: .22rem;
+        }
+        .left {
+            float: left;
+        }
+        .user_info_box img {
+            display: block;
+            width: 100%;
+            margin: 5px 0;
+        }
+        img, input {
+            border: none;
+        }
+        .user_info .icon_center img {
+            display: block;
+            width: 100%;
+        }
+        del {
+            text-decoration: line-through;
+        }
+        .price_box strong {
+            font-size: 22px;
+            font-weight: bold;
+            color: #000;
+        }
+        .time-item em {
+            color: #040404;
+            font-size: 14px;
+            font-weight: normal;
+        }
+        .public_pay_box a {
+            display: block;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            margin: 10px 20px 0;
+            border: 1px solid #fff;
+            border-radius: 20px;
+            text-indent: -9999em;
+        }
+        .pay_item {
+            overflow: hidden;
+            font-size: 14px;
+            padding: 0.12rem;
+            margin-top: 5px;
+        }
+        .pay_item .words {
+            text-align: center;
+            color: #525252;
+            font-size: .32rem;
+        }
+        .pay_item .public_bzhh_title {
+            cursor: pointer;
+            position: relative;
+            text-decoration: none;
+        }
+        .public_bzhh_title {
+            margin: 15px 0px 8px;
+            height: 38px;
+            line-height: 38px;
+            color: #fff;
+            display: block;
+            background: url(statics/pairing/bg_title_center.png) repeat-x;
+            background-size: 1px 38px;
+        }
+        .public_bzhh_title span.left, .public_bzhh_title span.right {
+            background: url(statics/pairing/title_edge.png) no-repeat #ffc99f;
+            width: 20px;
+            height: 38px;
+            background-size: 100% 100%;
+        }
+        .public_bzhh_title span {
+            display: block;
+        }
+        .right {
+            float: right;
+        }
+        .public_bzhh_title span.right {
+            -moz-transform: scaleX(-1);
+            -webkit-transform: scaleX(-1);
+            -o-transform: scaleX(-1);
+            transform: scaleX(-1);
+        }
+        .public_lock_content {
+            margin: 0 10px;
+            overflow: hidden;
+        }
+        .public_lock_content .list {
+            width: 76%;
+            line-height: 28px;
+        }
+        .public_lock_content .right {
+            width: 24%;
+            text-align: center;
+            color: #848484;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .public_lock_content .right img {
+            display: block;
+            max-width: 100%;
+            margin: 0 auto;
+        }
+        .footer_severs {
+            overflow: hidden;
+            width: 100%;
+            text-align: center;
+            color: #6c6c6c;
+            padding-bottom: 60px;
+            padding-top: 16px;
+            font-size: 14px;
+        }
+
+        .between-body {
+            padding: 0 .18rem;
+        }
+        .between-card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 5px #e8c7d6;
+            padding: .18rem;
+            text-align: center;
+        }
+        .between-title {
+            font-size: .4rem;
+            font-weight: 600;
+            color: #d74a50;
+        }
+        .between-card-context {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            margin-top: 0.3rem;
+        }
+        .left-body {
+            width: 2.61rem;
+            height: 3.45rem;
+            background: url("./statics/pairing/weiChatCard12.png");
+            background-size: 100% 100%;
+        }
+        .center-body {
+            width: 1.29rem;
+            background: url("./statics/pairing/weiChatCard14.png") no-repeat;
+            background-size: 100% 100%;
+        }
+        .right-body {
+            width: 2.61rem;
+            height: 3.45rem;
+            background: url("./statics/pairing/weiChatCard13.png");
+            background-size: 100% 100%;
+        }
+        .body-name {
+            margin: .1rem auto;
+            padding: .1rem;
+            width: 40%;
+            background: #d25459;
+            white-space: nowrap;
+            color: #fff;
+            font-size: .36rem;
+            border-radius: 0 0 0.1rem 0.1rem;
+        }
+        .between-price {
+            width: 100%;
+            padding: 0.16rem 0.13rem;
+            display: flex;
+            box-sizing: border-box;
+            justify-content: space-between;
+        }
+        .between-price-title {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .left-top-price {
+            font-size: 0.34rem;
+            color: #a80009;
+            text-align: left;
+        }
+        .left-bottom-price {
+            text-decoration: line-through;
+            font-size: .26rem;
+            color: rgb(151, 151, 151);
+            text-align: left;
+        }
+        .right-top-price {
+            font-size: .26rem;
+            text-align: right;
+        }
+        .right-bottom-price {
+
+        }
+        .van-count-down {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .van-count-down .block {
+            width: 0.43rem;
+            color: #fff;
+            font-size: .24rem;
+            text-align: center;
+            background-color: #c4393e;
+            box-sizing: border-box;
+            border: 1px solid #c4393e;
+        }
+        .van-count-down .colon {
+            display: inline-block;
+            margin: 0 0.04rem;
+            font-size: .2rem;
+            color: #c4393e;
+        }
+        .pay-detail {
+            padding: 5px;
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border: 1px solid #955b51;
+            box-sizing: border-box;
+            border-radius: 9px;
+        }
+        .pay-detail-wx {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0.13rem 0.12rem;
+            border-bottom: 1px solid #d3bcb9;
+        }
+        .pay-detail-al {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 0.13rem 0.12rem;
+        }
+        .wx-logo {
+            align-items: center;
+            font-size: .25rem;
+            white-space: nowrap;
+            display: flex;
+        }
+        .wx-logo img {
+            margin-right: .17rem;
+            width: 1rem;
+        }
+        .wx-btn {
+            width: 1.85rem;
+            height: 0.57rem;
+            background: #6bcc03;
+            border-radius: 0.29rem;
+            color: #fff;
+            font-size: .25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .al-btn {
+            width: 1.85rem;
+            height: 0.57rem;
+            background: #1b94d3;
+            border-radius: 0.29rem;
+            color: #fff;
+            font-size: .25rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .al-logo {
+            align-items: center;
+            font-size: .25rem;
+            white-space: nowrap;
+            display: flex;
+        }
+        .al-logo img {
+            margin-right: .17rem;
+            width: 1rem;
+        }
+        .top_brand-pair {
+            display: flex;
+            justify-content: space-around;
+        }
+        .top_brand-pair .img_box-pair {
+            padding: .12rem 5px;
+        }
+        .top_brand-pair .img_box-pair img{
+            width: 100%;
+        }
+        .detail-text {
+            color: #525252;
+            text-decoration: none;
+            font-size: .26rem;
+            display: flex;
+            line-height: 0.54rem;
+            width: 100%;
+            padding:.17rem 0;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .detail-text span {
+            color: #c4393e;
+        }
+        .bottom-pair {
+            text-align: center;
+            font-size: .24rem;
+            color: #19aa0f;
+            padding: 0.17rem 0;
+        }
+        .pay-load-screen {
+            height: 1.1rem;
+            box-shadow: 0 -4px 7px -4px #b85c6b87;
+            position: fixed;
+            bottom: 0;
+            z-index: 9999;
+            color: #525252;
+            width: 100%;
+            max-width: 750px;
+        }
+        .pay-detail-screen {
+            height: 100%;
+            padding: 0 0.1rem;
+            box-sizing: border-box;
+            background: #fff4f9;
+            color: #525252;
+            font-size: .36rem;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            flex-wrap: nowrap;
+        }
+        .pay-detail-screen img {
+            width: 2rem;
+            -webkit-animation-name: pay-load-data;
+            animation-name: pay-load-data;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+        @keyframes pay-load-data {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="public_banner">
+        <img src="./statics/pairing/weiChatCard11.png" alt="生辰合婚">
+    </div>
+    <div class="order_wrapper">
+        <div class="order_code">
+            订单编号：202205231138442338236700
+        </div>
+    </div>
+    <div class="between-body">
+        <div class="between-card">
+            <span class="between-title">您的配对结果已生成</span>
+            <div class="between-card-context">
+                <div class="left-body">
+                    <div class="body-name">和珅</div>
+                </div>
+                <div class="center-body"></div>
+                <div class="right-body">
+                    <div class="body-name">纪晓岚</div>
+                </div>
+            </div>
+            <div class="between-price">
+                <div class="between-price-title">
+                    <div class="left-top-price">限时优惠￥9.90元</div>
+                    <div class="left-bottom-price">原价￥88.00元</div>
+                </div>
+                <div class="between-price-title">
+                    <div class="right-top-price">距优惠结束还剩</div>
+                    <div class="right-bottom-price">
+                        <div class="van-count-down">
+                            <span class="block">00</span>
+                            <span class="colon">:</span>
+                            <span class="block">00</span>
+                            <span class="colon">:</span>
+                            <span class="block">0</span>
+                            <span class="colon">:</span>
+                            <span class="block">0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pay-detail">
+                <div class="pay-detail-wx">
+                    <div class="wx-logo">
+                        <img src="./statics/pairing/WechatIMG1564.png">
+                        微信支付
+                    </div>
+                    <div class="wx-btn">
+                        立即支付
+                    </div>
+                </div>
+                <div class="pay-detail-al">
+                    <div class="al-logo">
+                        <img src="./statics/pairing/WechatIMG156.png">
+                        支付宝
+                    </div>
+                    <div class="al-btn">
+                        立即支付
+                    </div>
+                </div>
+            </div>
+            <div class="detail-text">
+                已有
+                <span>9, 789, 316</span>
+                人查看结果，帮助他们找到美满婚姻
+                <span>99.7%</span>
+                的用户认为对他们的婚姻生活很有帮助
+            </div>
+            <div class="top_brand-pair">
+                <div class="img_box-pair">
+                    <img src="./statics/pairing/location1.png" alt="">
+                </div>
+                <div class="img_box-pair">
+                    <img src="./statics/pairing/location2.png" alt="">
+                </div>
+                <div class="img_box-pair">
+                    <img src="./statics/pairing/location3.png" alt="">
+                </div>
+            </div>
+            <div class="bottom-pair">
+                支付系统已通过安全联盟认证，答案仅自己可见
+            </div>
+        </div>
+    </div>
+    <div class="pay-load-screen" style="display: none">
+        <div class="pay-detail-screen">
+            支付后解锁:
+            <img src="./statics/pairing/WechatIMG5656.png" alt="">
+            <img src="./statics/pairing/WechatIMG4343.png" alt="">
+        </div>
+    </div>
+    <div class="pay_item J_testFixedShow">
+        <div class="words">
+            <span>支付完成后，将为您解锁其余八项重要内容：</span>
+        </div>
+        <a href="javascript:;" class="public_bzhh_title J_payPopupShow"><span class="left"></span><span class="right"></span><span class="center">第一：gfd小姐的命格</span><i></i></a><a href="javascript:;" class="public_bzhh_title J_payPopupShow"><span class="left"></span><span class="right"></span><span class="center">第二：fsd先生的命格</span><i></i></a>
+        <div class="public_bzhh_title">
+            <span class="left"></span><span class="right"></span><span class="center">第三：（合婚指数）名师点评</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    你们一生的婚姻究竟会是怎样呢？
+                </p>
+                <p>
+                    相比与其他人来说，是好还是坏？
+                </p>
+                <p>
+                    综合命理纲要给你一个圆满答案。
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第四：（双方性格）命运合盘</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    你们的生辰命盘是否相合？
+                </p>
+                <p>
+                    你们的幸福指数是多少？
+                </p>
+                <p>
+                    什么方位最能促进你们婚姻和谐？
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第五：（前世今生）命中注定</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    你们是否是天生一对？
+                </p>
+                <p>
+                    在别人眼中你们的婚姻是怎样的？
+                </p>
+                <p>
+                    生活中你们是怎样和谐相处？
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第六：（婚配指数）心有灵犀</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    对方会是个温柔体贴的人吗？
+                </p>
+                <p>
+                    会屈就于你还是你只有听从的份？
+                </p>
+                <p>
+                    相处之中你们是否更具默契？
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第七：（感情质量）相扶相旺</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    配偶是得力助手还是对方的累赘？
+                </p>
+                <p>
+                    你对配偶是助旺还是助衰呢？
+                </p>
+                <p>
+                    你们能互相助旺、优势互补吗？
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第八：（天长地久）吉凶几何</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    你们的婚后生活稳定吗？
+                </p>
+                <p>
+                    婚姻生活中会遇到哪些危机？
+                </p>
+
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第九：（双方优点）魅力相吸</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    你们的婚姻保质期有多久？
+                </p>
+                <p>
+                    另一半是否有出轨倾向？
+                </p>
+                <p>
+                    针对你们的爱情保鲜秘籍是什么？
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+        <div class="public_bzhh_title J_payPopupShow">
+            <span class="left"></span><span class="right"></span><span class="center">第十：（婚后生活）子女同步</span><i></i>
+        </div>
+        <div class="public_lock_content">
+            <div class="list left">
+                <p>
+                    命里你们是否会儿孙满堂？
+                </p>
+                <p>
+                    孩子能让你们开心还是疲惫？
+                </p>
+                <p>
+                    孩子的到来会让婚姻变得更加稳定?
+                </p>
+            </div>
+            <div class="right J_payPopupShow">
+                <img src="./statics/pairing/icon_suo.png" alt="解锁">
+                <p>
+                    解锁查看
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer class="footer_severs" style="margin-bottom: 75px">
+        <p>在线服务时间: 周一至周五9:00-18:00</p>
+        <p>武汉道森梯媒文化传播有限公司</p>
+        <p>地址：武汉市武昌区徐东大街168号</p>
+        <p>电话：18181818181</p>
+    </footer>
+    <script>
+        let width
+        if (window.screen.width > 740) {
+            width = 100
+        } else {
+            width = window.screen.width / 740 * 100;
+        }
+        let html = document.querySelector("html");
+        html.style.fontSize = width + "px";
+
+        let watchWindowSize = (e) => {
+            let html = document.querySelector("html");
+            let screenWidth = e.currentTarget.screen.width;
+            let rem
+            if (screenWidth > 740) {
+                rem = 100
+            } else {
+                rem = screenWidth / 740 * 100;
+            }
+            html.style.fontSize = rem + "px";
+        };
+
+        window.addEventListener("resize", watchWindowSize);
+    </script>
+    <script>
+        // 监听页面滚动 获取滚动条位置
+        let windowScroll= function () {
+            let scrollTop =
+                window.pageYOffset ||
+                document.documentElement.scrollTop ||
+                document.body.scrollTop;
+            let payDom = document.getElementsByClassName("pay-load-screen")[0];
+            if (scrollTop > 300) {
+                payDom.style.display = "block";
+            } else {
+                payDom.style.display = "none";
+            }
+        };
+        window.addEventListener('scroll', windowScroll) //监听页面滚动
+    </script>
+</body>
+</html>
