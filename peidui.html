@@ -1,0 +1,1418 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="" style="font-size: 50px;">
+<head>
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no,minimum-scale=1.0, maximum-scale=1.0">
+    <title>在线生辰合婚、生辰生辰合婚、生辰姻缘配对合婚</title>
+    <link rel="stylesheet" href="./statics/css/index.css"/>
+    <!-- ks-trace -->
+    <script type="text/javascript">
+
+    </script>
+    <!-- end ks-trace -->
+
+    <style>
+        blockquote, body, button, code, dd, div, dl, dt, fieldset, figure, form, h1, h2, h3, h4, h5, h6, input, legend, li, ol, p, pre, section, select, td, textarea, th, ul {
+            margin: 0;
+            padding: 0;
+        }
+        html {
+            width: 100%;
+            height: 100%;
+            margin: 0 auto;
+            max-width: 100vw;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            font-family: microsoft yahei,arial,verdana;
+        }
+        button, input, textarea, span, p, div {
+            color: inherit;
+            font-size: inherit;
+            border: none;
+            outline: none;
+        }
+        body, #app {
+            width: 100%;
+            max-width: 750px;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .button_anchor {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            max-width: 750px;
+            z-index: 99;
+        }
+        .button_anchor-header {
+            display: flex;
+            width: 100%;
+            line-height: 1.08rem;
+            font-size: .43rem;
+            height: 1.08rem;
+            border: 1px solid #c91c18;
+            font-weight: 700;
+            box-sizing: border-box;
+        }
+        .button_result {
+            display: flex;
+            width: 100%;
+            background: #c91c18;
+            color: #fff;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .button_test {
+            display: flex;
+            width: 100%;
+            background: #fff;
+            color: #c91c18;
+            justify-content: center;
+            align-items: center;
+        }
+        .button_test-fire, .button_test-popular {
+            height: .4rem;
+        }
+        .button_test-fire {
+            margin-right: .2rem;
+        }
+        .button_test-popular {
+            margin-top: -0.45rem;
+        }
+        .button_anchor-tip {
+            display: flex;
+            height: 0.77rem;
+            font-size: .33rem;
+            background: #ffeff6;
+            padding: 0 0.72rem;
+            align-items: center;
+        }
+        .button_anchor-tip-img {
+            margin-right: 0.32rem;
+            height: 0.47rem;
+        }
+        .button_anchor-tip-text {
+            color: #e7010e;
+            white-space: nowrap;
+        }
+        .button_anchor-bottom {
+            height: 0.58rem;
+            display: flex;
+        }
+        .button_anchor-bottom-img {
+            height: 0.58rem;
+        }
+        .content {
+            padding: 0.2rem;
+        }
+        .phone-card {
+            margin: 3rem auto 0.3rem;
+            width:100%;
+            display: flex;
+            flex-direction: column;
+            padding: 0.3rem 0;
+            background: #fff;
+            border: 0.01rem solid #bfbfbf;
+            border-radius: 0.3rem;
+            box-shadow: 0 0 8px -3px #000;
+            font-size: .33rem;
+            box-sizing: border-box;
+        }
+        .phone-card-title {
+            height: 0.97rem;
+            background: rgba(255,239,246,.71);
+            color: rgba(196,57,62,.71);
+            font-weight: 600;
+            display: flex;
+            font-size: 0.45rem;
+            justify-content: center;
+            align-items: center;
+        }
+        .phone-card-form {
+            display: flex;
+            flex-direction: column;
+            padding: 0.15rem 0.5rem;
+        }
+        .phone-card-input {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: 1.15rem;
+            border: 0.01rem solid #ccc;
+            border-radius: 0.14rem;
+            margin: auto;
+            font-size: .28rem;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: #525252;
+            padding: 0 0.3rem;
+            box-sizing: border-box;
+        }
+        .phone-card-input div {
+            font-size: .32rem;
+            font-weight: 400;
+            margin-right: 0.2rem;
+            color: #000000;
+        }
+        .phone-card-input input {
+            display: flex;
+            flex: 1;
+            font-size: .32rem;
+            -webkit-appearance: none;
+            -webkit-tap-highlight-color:rgba(0,0,0,0);
+        }
+        .phone-card-button {
+            background: rgba(201,28,24,.85);
+            margin-top: 0.32rem;
+            height: 1.1rem;
+            color: #ffffff;
+            font-size: .45rem;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            border-radius: 0.15rem;
+            cursor: pointer;
+        }
+        .phone-card-privacy {
+            display: flex;
+            align-items: center;
+            margin: 0.3rem 0;
+        }
+        .phone-card-privacy input{
+            display: flex;
+            height: 100%;
+            width: 0.3rem;
+            margin-right: 0.1rem;
+        }
+        .phone-card-privacy-text {
+            white-space: nowrap;
+        }
+        .phone-card-privacy-module {
+            font-weight: 400;
+            color: #525252;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .banner-content {
+            font-size: .35rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: .4rem;
+        }
+        .banner-content img{
+            margin-right: .25rem;
+            height: .45rem;
+        }
+        .card-border-bg {
+            position: relative;
+            width: 100%;
+            margin: 0.3rem auto;
+            background: #fff;
+            border-radius: 0.3rem;
+            box-shadow: 0 0 5px #e8c7d6;
+            padding-top: 0.24rem;
+            padding-bottom: 0.6rem;
+            font-size: .24rem;
+        }
+        .card-img-header {
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+        .card-text-header {
+            width: 5.8rem;
+            height: 0.95rem;
+            margin: 0.1rem auto 0.4rem;
+            text-align: center;
+            color: #c4393e;
+            align-items: center;
+            font-weight: 700;
+            line-height: .73rem;
+            background: url(./statics/peidui/button.jpg) no-repeat;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            font-size: .48rem;
+
+        }
+        .fit-card {
+        }
+        .fit-card-img-content {
+        }
+        .fit-card-header {
+        }
+        .fit-card-data {
+            display: flex;
+            width: 100%;
+            padding: 0.4rem 0.5rem;
+            height: 2.5rem;
+            box-sizing: border-box;
+        }
+        .fit-card-data-left {
+            display: flex;
+            width: 100%;
+            border-top-left-radius: 0.1rem;
+            border-bottom-left-radius: 0.1rem;
+            background: #c7dfff;
+            flex-direction: column;
+            justify-content: center;
+            padding: .1rem 0.3rem;
+        }
+        .fit-card-data-left-eval {
+            font-size: .27rem;
+            color: #3d649a;
+        }
+        .fit-card-data-left-main {
+            font-size: .45rem;
+            font-weight: 600;
+            color: #3d649a;
+        }
+        .fit-card-data-center {
+            position: absolute;
+            left: 50%;
+            background: #ffffff;
+            height: 1.7rem;
+            width: 1.7rem;
+            margin-left: -0.85rem;
+            border-radius: 50%;
+            justify-content: center;
+            display: flex;
+            align-items: center;
+            font-size: .8rem;
+            color: #fda2b2;
+            font-weight: 600;
+        }
+        .fit-card-data-right {
+            display: flex;
+            width: 100%;
+            border-top-right-radius: 0.1rem;
+            border-bottom-right-radius: 0.1rem;
+            background: #fccadc;
+            flex-direction: column;
+            justify-content: center;
+            padding: .1rem 0.3rem;
+            align-items: flex-end;
+        }
+        .fit-card-data-right-main {
+            font-size: .45rem;
+            font-weight: 600;
+            color: #933858;
+        }
+        .fit-card-data-right-eval {
+            font-size: .27rem;
+            color: #933858;
+        }
+        .fit-card-content-text {
+            padding: 0 0.5rem;
+            font-size: .36rem;
+        }
+        .fit-card-content-text p {
+            margin-bottom: .3rem;
+        }
+        .table {
+            padding: 0.3rem 0.5rem;
+        }
+        .gender-men .table-one-class {
+            border: 1px solid #56a7b5;
+            background: #e7fafe;
+        }
+        .gender-women .table-one-class {
+            border: 1px solid #e7193d;
+            background: #fde7e8;
+        }
+        .gender-men .table-two-class {
+            color: #2fb6cc;
+        }
+        .gender-women .table-two-class {
+            color: #e7193d;
+        }
+        .gender-men .table-three-class {
+            border-color: #2fb6cc;
+        }
+        .gender-women .table-three-class {
+            border-color: #e7193d;
+        }
+        .gender-men .table-three-class::before{
+            border-top: 0.16rem solid #2fb6cc;
+        }
+        .gender-women .table-three-class::before{
+            border-top: 0.16rem solid #e7193d;
+        }
+        .gender-men .table-three-class::after{
+            border-top: 0.16rem solid #e7fafe;
+        }
+        .gender-women .table-three-class::after{
+            border-top: 0.16rem solid #fde7e8;
+        }
+        .gender-men .table-five{
+            border-color: #2fb6cc;
+        }
+        .gender-women .table-five{
+            border-color: #e7193d;
+        }
+        .gender-men .table-five::before{
+            border-top: 0.16rem solid #2fb6cc;
+        }
+        .gender-women .table-five::before{
+            border-top: 0.16rem solid #e7193d;
+        }
+        .gender-men .table-five::after{
+            border-top: 0.16rem solid #e7fafe;
+        }
+        .gender-women .table-five::after{
+            border-top: 0.16rem solid #fde7e8;
+        }
+
+        .table-one {
+            font-size: .3rem;
+            font-weight: 700;
+        }
+        .table-one-class {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0.14rem 0;
+            padding: 0.18rem;
+        }
+        .table-two {
+            display: flex;
+        }
+        .table-two-class {
+            width: 1.1rem;
+            height: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: .65rem;
+            padding: 0.16rem 0.16rem 0.08rem 0.16rem;
+            box-sizing: border-box;
+            margin: 0 .1rem;
+        }
+        .first-tab-class {
+            background: #ffffff;
+            border: 1px solid #d5d5d6;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+        }
+        .table-three {
+            display: flex;
+            justify-content: center;
+        }
+        .table-three-class {
+            width: 1.1rem;
+            height: 0.14rem;
+            margin: 0 .1rem;
+            border-bottom: 1px solid;
+            border-bottom-left-radius: 7px;
+            border-bottom-right-radius: 7px;
+            border-right: 1px solid;
+            border-left: 1px solid;
+            position: relative;
+        }
+
+        /* 第一个三角形颜色换成边框颜色 */
+        .table-three-class::before{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0.14rem;
+            left: 50%;
+            margin-left: -0.08rem;
+            border-left: 0.08rem solid transparent;
+            border-right: 0.08rem solid transparent;
+        }
+
+        /* 第二个三角形颜色换成背景色 */
+        .table-three-class::after{
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0.1rem;
+            left: 50%;
+            margin-left: -0.08rem;
+            border-left: 0.08rem solid transparent;
+            border-right: 0.08rem solid transparent;
+        }
+        .table-four {
+            display: flex;
+            justify-content: center;
+        }
+        .table-four-class {
+            width: 1.1rem;
+            margin: 0.15rem 0.1rem;
+            font-size: .33rem;
+            display: flex;
+            white-space: nowrap;
+            justify-content: center;
+        }
+        .table-five {
+            border-bottom: 1px solid;
+            border-right: 1px solid;
+            border-left: 1px solid;
+            border-bottom-left-radius: 0.15rem;
+            border-bottom-right-radius: 0.15rem;
+            display: flex;
+            font-size: .33rem;
+            justify-content: center;
+            padding: 0.15rem 1rem;
+            position: relative;
+        }
+        /* 第一个三角形颜色换成边框颜色 */
+        .table-five::before{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: -0.17rem;
+            left: 50%;
+            margin-left: -0.1rem;
+            border-left: 0.1rem solid transparent;
+            border-right: 0.1rem solid transparent;
+        }
+
+        /* 第二个三角形颜色换成背景色 */
+        .table-five::after{
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: -0.15rem;
+            left: 50%;
+            margin-left: -0.08rem;
+            border-left: 0.08rem solid transparent;
+            border-right: 0.08rem solid transparent;
+        }
+        .table-six {
+            margin: 0.2rem;
+            font-size: .35rem;
+        }
+        .fit-xingge-img img {
+            height: 2rem;
+            width: 100%;
+        }
+        .fit-xingge-content {
+            padding: 0.4rem 0.5rem;
+            font-size: .34rem;
+        }
+        .fit-xingge-content p {
+            margin-bottom: .34rem;
+        }
+        .fit-xingge-content-div span{
+            font-weight: 700;
+            color: #525252;
+            line-height: .68rem;
+        }
+        .fit-xingge-content-div div{
+            color: #525252;
+            line-height: .53rem;
+        }
+        .fit-xingge-content-div {
+            margin-bottom: .34rem;
+            line-height: .53rem;
+        }
+        .fit-xingge-img {
+            position: relative;
+        }
+        .fit-img-text-xingge {
+            position: absolute;
+            bottom: 0;
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 0 0.5rem;
+        }
+        .fit-img-text {
+            width: 2.5rem;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        .fit-img-text .fit-img-text-main {
+            color: #525252;
+            font-size: .48rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.7rem;
+        }
+        .fit-img-text .fit-img-text-eval {
+            color: #9b9b9c;
+            font-size: .32rem;
+        }
+        .fit-ganqing-content {
+            padding: 0.4rem 0.5rem;
+            font-size: .34rem;
+        }
+        .fit-ganqing-content-div>span{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            padding: 0.43rem 0;
+            font-size: .40rem;
+            font-weight: 600;
+            color: #c4393e;
+            line-height: .53rem;
+        }
+        .fit-ganqing-title {
+            font-weight: bold;
+            color: #525252;
+            line-height: .53rem;
+        }
+        .fit-ganqing-title>span {
+            font-weight: 400;
+            color: #525252;
+            font-size: .40rem;
+        }
+        .fit-ganqing-star {
+            display: flex;
+            margin: 0.4rem 0;
+            align-items: center;
+        }
+        .fit-ganqing-star img {
+            height: 0.36rem;
+            margin: 0 0.05rem;
+        }
+        .fit-ganqing-item {
+            font-weight: 400;
+        }
+        .fit-ganqing-tips {
+            padding: .32rem 0 .22rem 0;
+            font-weight: 400;
+        }
+        .fit-jinji-list {
+            padding: 0.2rem 0.5rem;
+            line-height: .54rem;
+            font-size: .34rem;
+        }
+        .fit-jinji-item {
+            margin-bottom: .34rem;
+        }
+        .fit-jinji-item>span{
+            color: #c4393e;
+            font-weight: 600;
+            font-size: .40rem;
+        }
+        .fit-jinji-message {
+            margin-top: .34rem;
+            color: #67386f;
+        }
+        .fit-caiyun-list {
+            padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+            line-height: .54rem;
+            font-size: .34rem;
+        }
+        .fit-caiyun-item {
+
+        }
+        .fit-caiyun-item-title{
+            font-weight: 600;
+        }
+        .fit-hunhou-list {
+            padding: 0.2rem 0.5rem;
+            line-height: .54rem;
+            font-size: .34rem;
+        }
+        .fit-hunhou-item {
+            margin-bottom: .34rem;
+        }
+        .fit-hunhou-item span {
+            color: #c4393e;
+            font-weight: 600;
+        }
+        .content-over {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: .24rem;
+        }
+        .content-over span {
+            font-size: .36rem;
+            padding: 0.13rem;
+        }
+        .content-humen {
+            display: flex;
+            width: 100%;
+            height: 2.6rem;
+        }
+        .content-humen img{
+            width: 100%;
+            height: 100%;
+            -webkit-animation-name: content-humen-img;
+            animation-name: content-humen-img;
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        @keyframes content-humen-img {
+               0% {
+                   transform: scale(1);
+               }
+
+               50% {
+                   transform: scale(0.9);
+               }
+
+               100% {
+                   transform: scale(1);
+               }
+           }
+        .popular-share {
+            font-size: .64rem;
+            font-weight: 600;
+            color: #c71c19;
+            background: #f6dbd9;
+            height: 1.3rem;
+            display: flex;
+            align-items: center;
+
+            margin: .3rem 0;
+            justify-content: center;
+        }
+        .card-list {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+        }
+        .card-item {
+            width: 100%;
+            margin: .23rem 0;
+        }
+        .card-item img {
+            width: 100%;
+        }
+        .footer-list-btn {
+            display: flex;
+            width: 100%;
+            border: 1px solid #c71c19;
+            height: 1.4rem !important;
+            font-size: 0.44rem;
+            box-sizing: border-box;
+        }
+        .footer-list-more-test {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            white-space: nowrap;
+            padding: 0 0.43rem;
+            color: #c71c19;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .footer-list-test-me {
+            background: #c71c19;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+        .footer-list-test-me img {
+            height: 0.44rem;
+            margin-right: .22rem;
+            cursor: pointer;
+        }
+
+        .protocol_pop_box {
+            background: rgba(0,0,0,.7);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            display: none;
+        }
+        .ppb_content {
+            width: 85%;
+            margin: auto;
+            border: 1px solid #ccc;
+            position: relative;
+            background-color: #fff;
+            box-sizing: border-box;
+            border-radius: 10px;
+            top: 10%;
+            display: flex;
+            flex-direction: column;
+        }
+        .ppb_title {
+            top: 0;
+            text-align: center;
+            font-size: 0.5rem;
+            padding: 10px 0;
+        }
+        .ppb_close, .ppb_title {
+            width: 100%;
+            cursor: pointer;
+            line-height: 40px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+        .ppb_text {
+            overflow-y: scroll;
+            box-sizing: border-box;
+            height: 6rem;
+            padding: 10px;
+            font-size: 0.26rem;
+            margin: 0 10px;
+            border: 1px solid #ccc;
+        }
+        .ppb_text p {
+            margin-top: 8px;
+            font-size: 0.3rem;
+        }
+        .ppb_close {
+            display: flex;
+            padding: 10px;
+        }
+        .ppb_close b {
+            display: block;
+            width: 50%;
+            max-width: 200px;
+            height: 1rem;
+            margin: auto;
+            background: #fcc795;
+            color: #c21714;
+            font-size: .3rem;
+            border: 1px solid #ccc;
+            line-height: 1rem;
+            border-radius: 20px;
+        }
+        b, strong {
+            font-weight: 400;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <header>
+            <div class="button_anchor">
+                <div class="button_anchor-header">
+                    <div class="button_result">配对结果</div>
+                    <div class="button_test">
+                        <img class="button_test-fire" src="./statics/peidui/fire.png" alt="">
+                        婚姻测算
+                        <img class="button_test-popular" src="./statics/peidui/popular.png" alt="">
+                    </div>
+                </div>
+                <div class="button_anchor-tip">
+                    <img class="button_anchor-tip-img" src="./statics/peidui/horn.png" alt="">
+                    <div class="button_anchor-tip-text">恭喜你！成功领取你的配对结果报告。</div>
+                </div>
+                <div class="button_anchor-bottom">
+                    <img class="button_anchor-bottom-img" src="./statics/peidui/flower.png" alt="">
+                </div>
+            </div>
+        </header>
+        <div class="content">
+            <div class="phone-card">
+                <div class="phone-card-title">可将结果永久保存到手机</div>
+                <div class="phone-card-form">
+                    <div class="phone-card-input">
+                        <div>手机 :</div>
+                        <input type="text" placeholder="填写订单绑定号码, 例:  13566668888">
+                    </div>
+                    <div class="phone-card-button">
+                        <div>免费发送至以上手机</div>
+                    </div>
+                    <div class="phone-card-privacy">
+                        <input type="checkbox">
+                        <div class="phone-card-privacy-text">我已阅读并同意</div>
+                        <div class="phone-card-privacy-module" id="showModule">《服务条款和隐私政策》</div>
+                    </div>
+                </div>
+            </div>
+            <div class="banner-content">
+                <img src="./statics/peidui/hand.png" alt="">
+                往下滑动查看您的婚姻运势报告
+            </div>
+            <div class="fit-card card-border-bg">
+                <img class="fit-card-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-card-header card-text-header">
+                    匹配契合度
+                </div>
+                <div class="fit-card-data">
+                    <div class="fit-card-data-left">
+                        <div class="fit-card-data-left-main">张三</div>
+                        <div class="fit-card-data-left-eval">男主角</div>
+                    </div>
+                    <div class="fit-card-data-center">88.5</div>
+                    <div class="fit-card-data-right">
+                        <div class="fit-card-data-right-main">黄叶子</div>
+                        <div class="fit-card-data-right-eval">女主角</div>
+                    </div>
+                </div>
+                <div class="fit-card-content-text">
+                    <p>
+                        从你们姓名五行能量分析，结合双方感情状况，你们的关系评分为88.5分。一般这个分数的双方有一定的感情基础，在相处的过程中，容易产生一些小的误会，而影响双方的感情，通常会经过一段时间的调整，会重归与好。
+                    </p>
+                    <p>
+                        从你们姓名五行能量分析，结合双方感情状况，你们的关系评分为88.5分。一般这个分数的双方有一定的感情基础，在相处的过程中，容易产生一些小的误会，而影响双方的感情，通常会经过一段时间的调整，会重归与好。
+                    </p>
+                    <p>
+                        从你们姓名五行能量分析，结合双方感情状况，你们的关系评分为88.5分。一般这个分数的双方有一定的感情基础，在相处的过程中，容易产生一些小的误会，而影响双方的感情，通常会经过一段时间的调整，会重归与好。
+                    </p>
+                    <p>
+                        从你们姓名五行能量分析，结合双方感情状况，你们的关系评分为88.5分。一般这个分数的双方有一定的感情基础，在相处的过程中，容易产生一些小的误会，而影响双方的感情，通常会经过一段时间的调整，会重归与好。
+                    </p>
+                </div>
+            </div>
+            <div class="fit-wuge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-wuge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-wuge-header card-text-header">
+                    男女姓名婚姻五格
+                </div>
+                <div class="fit-wuge-data">
+                    <div class="table gender-men">
+                        <div class="table-one">
+                            男主角：姚建林
+                        </div>
+                        <div class="table-one-class">
+                            <div class="table-two">
+                                <div class="table-two-class">
+                                    <div class="first-tab-class">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="table-two-class">姚</div>
+                                <div class="table-two-class">建</div>
+                                <div class="table-two-class">林</div>
+                            </div>
+                            <div class="table-three">
+                                <div class="table-three-class">
+                                </div>
+                                <div class="table-three-class">
+                                </div>
+                                <div class="table-three-class">
+                                </div>
+                            </div>
+                            <div class="table-four">
+                                <div class="table-four-class">天格:10</div>
+                                <div class="table-four-class">人格:18</div>
+                                <div class="table-four-class">地格:17</div>
+                            </div>
+                            <div class="table-five">外格:9</div>
+                            <div class="table-six">总格26</div>
+                        </div>
+                    </div>
+                    <div class="table gender-women">
+                        <div class="table-one">
+                            女主角：赵艳梅
+                        </div>
+                        <div class="table-one-class">
+                            <div class="table-two">
+                                <div class="table-two-class">
+                                    <div class="first-tab-class">
+                                        1
+                                    </div>
+                                </div>
+                                <div class="table-two-class">赵</div>
+                                <div class="table-two-class">艳</div>
+                                <div class="table-two-class">梅</div>
+                            </div>
+                            <div class="table-three">
+                                <div class="table-three-class">
+                                </div>
+                                <div class="table-three-class">
+                                </div>
+                                <div class="table-three-class">
+                                </div>
+                            </div>
+                            <div class="table-four">
+                                <div class="table-four-class">天格:10</div>
+                                <div class="table-four-class">人格:18</div>
+                                <div class="table-four-class">地格:17</div>
+                            </div>
+                            <div class="table-five">外格:9</div>
+                            <div class="table-six">总格26</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fit-xingge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-xingge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-xingge-header card-text-header">
+                    男女双方性格
+                </div>
+                <div class="fit-xingge-img">
+                    <img src="./statics/peidui/bagua.png" alt="">
+                    <div class="fit-img-text-xingge">
+                        <div class="fit-img-text">
+                            <div class="fit-img-text-main">张三丰</div>
+                            <div class="fit-img-text-eval">男主角</div>
+                        </div>
+                        <div class="fit-img-text">
+                            <div class="fit-img-text-main">黄月英</div>
+                            <div class="fit-img-text-eval">女主角</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fit-xingge-content">
+                    <p>
+                        根据你们的姓名五行能量、时间进行起卦，其中 体卦代表本人的性格，用卦代表你求测另一半的 性格。
+                    </p>
+                    <div class="fit-xingge-content-div">
+                        <span>本人性格分析</span>
+                        <div>
+                            体卦为巽卦，从巽卦反映出你的性格风评好，受他人喜欢，做事速度快，有效率，能较好完成他人期望。在异性交往中，会比较重视对方，为对方掏心掏肺。比较宠妻。好出风头，有时容易因他人追捧，做出不切实际的承诺，导致事情办不成，让人失望。在工作中往往能很好的完成自己的工作，也能够帮助同事，是同事眼中女强人。
+                        </div>
+                    </div>
+                    <div class="fit-xingge-content-div">
+                        <span>另一半性格分析</span>
+                        <div>
+                            用卦为艮卦，从艮卦反映出你的性格实诚守信用、耿直爽快、办事有信誉、忠厚老实。在工作中往往能很积极的完成自己的工作内容，但会因为粗心等小问题出现差错。有时候难以变通突破自己，自己不认可的事情，难以才难他人的建议。在异性交往中往往不容易爱上对方，但一旦爱了就是深爱。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fit-xingge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-xingge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-xingge-header card-text-header">
+                    双方感情匹配度分析
+                </div>
+                <div class="fit-xingge-img">
+                    <img src="./statics/peidui/bagua.png" alt="">
+                    <div class="fit-img-text-xingge">
+                        <div class="fit-img-text">
+                            <div class="fit-img-text-main">张三丰</div>
+                            <div class="fit-img-text-eval">男主角</div>
+                        </div>
+                        <div class="fit-img-text">
+                            <div class="fit-img-text-main">黄月英</div>
+                            <div class="fit-img-text-eval">女主角</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="fit-ganqing-content">
+                    <p>
+                        根据你们的姓名五行能量、时间进行起卦，其中 体卦代表本人的性格
+                        <span style="color: #c2393f">本卦代表你们双方感情相处的现状，互卦代表你 们未来相处的过程</span>
+                        、容易遇到的情感问题，
+                        <span style="color: #c2393f">变卦 代表你们相处的结果、</span>
+                        最终感情的走向。
+                    </p>
+                    <div class="fit-ganqing-content-div">
+                        <span>双方感情现状分析</span>
+                        <div>
+                            本卦代表你们双方感情相处的现状，从卦象显示来看，你们双方感情得上卦艮 ，下卦巽，所以你的本卦为 山风蛊卦 。
+                        </div>
+                        <div class="fit-ganqing-title">山风蛊卦的卦象</div>
+                        <div class="fit-ganqing-title">卦象等级：<span>小吉</span></div>
+                        <div class="fit-ganqing-title fit-ganqing-star">
+                            评分：
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                        </div>
+                        <div class="fit-ganqing-title">
+                            卦象解析:
+                            <div class="fit-ganqing-list">
+                                <p class="fit-ganqing-item">
+                                    卦中爻象如推磨，顺当为福反为祸，心中有益且迟迟，凡事尽从忙处错。这个卦是异卦(下巽上艮)相叠，与随卦互为综卦。蛊(gu)本意为事，引申为多事、混乱。器皿久不用而生虫称“蛊”，喻天下久安而因循、腐败，必须革新创造，治理整顿，挽救危机，重振事业。
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    说明你们双方感情
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    此卦代表：双方关系一般。遇到问题时，感情中有一方常常不敢说真话，会有所隐瞒，被发现后容易产生大矛盾，导致问题更加严重。感情中的一方常常不说真话，有时候会用好话哄人，容易让另一方相信，甚至是更加爱ta。
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    建议你们不要隐瞒哄骗另一半，也要适当提高警惕，不要过于相信别人的花言巧语。不要被花言巧语迷了眼，早早清醒，不要恋爱脑，必须尽早脱身，离开这段感情。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fit-ganqing-content-div">
+                        <span>双方未来相处分析</span>
+                        <div>
+                            互卦代表你们未来相处的过程，从卦象显示来看，你们双方感情得上卦震 ，下卦兑，所以你的本卦为 雷泽归妹卦 。
+                        </div>
+                        <div class="fit-ganqing-title">雷泽归妹卦的卦象</div>
+                        <div class="fit-ganqing-title">卦象等级：<span>小吉</span></div>
+                        <div class="fit-ganqing-title fit-ganqing-star">
+                            评分：
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                        </div>
+                        <div class="fit-ganqing-title">
+                            卦象解析:
+                            <div class="fit-ganqing-list">
+                                <p class="fit-ganqing-item">
+                                    求鱼须当向水中，树上求之不顺情，受尽爬揭难随意，劳而无功运平平。这个卦是异卦(下兑上震)相叠。震为动、为长男;兑为悦、为少女。以少女从长男，产生爱慕之情，有婚姻之动，有嫁女之象，故称归妹。男婚女嫁，天地大义，人的开始和终结。上卦与渐卦为综卦，交互为用。
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    说明你们双方感情在相处过程中
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    此卦代表：双方感情处于紧张期，双方容易出现抱怨，不满于现状。生活中容易遇到棘手的问题，同时来自长辈的压力较大。两人未必认定对方是最终的归宿，容易发生矛盾，对现状感到很迷茫，不知道该如何解决。
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    建议你们可以试着突破现状，解决一些力所能及的问题。感情经营需要行动，试着改变现状，为对方做一些事，解决当下的困境。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fit-ganqing-content-div">
+                        <span>双方最终感情走向</span>
+                        <div>
+                            变卦代表你们未来相处的过程，从卦象显示来看，你们双方感情得上卦巽 ，下卦巽，所以你的本卦为 巽为风卦 。
+                        </div>
+                        <div class="fit-ganqing-title">巽为风卦的卦象</div>
+                        <div class="fit-ganqing-title">卦象等级：<span>小吉</span></div>
+                        <div class="fit-ganqing-title fit-ganqing-star">
+                            评分：
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                            <img src="./statics/peidui/star-white.png" alt="">
+                        </div>
+                        <div class="fit-ganqing-title">
+                            卦象解析:
+                            <div class="fit-ganqing-list">
+                                <p class="fit-ganqing-item">
+                                    一叶孤舟落沙滩，有篙无水进退难，时逢大雨江湖溢，不用费力任往返。这个卦是同卦(下巽上巽)相叠，巽(xùn)为风，两风相重，长风不绝，无孔不入，巽义为顺。谦逊的态度和行为可无往不利。
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    说明你们双方感情在相处过程中
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    此卦代表：双方关系一般，两人可以聊到一起，但是性格都比较随和，做事拿不定主意。两人都是比较有灵气的人，可以聊到一起，但是做事经常摇摆不定，没有自己的主见。
+                                </p>
+                                <p class="fit-ganqing-item">
+                                    建议你们两人需要避免摇摆不定，做事要拿定主意。尽量改变自己优柔寡断的性格，遇事可以冷静下来好好考虑再拿定自己的主意。
+                                </p>
+                            </div>
+                            <div class="fit-ganqing-tips">
+                                温馨提示:若本卦、互卦和变卦三个卦象结果相同 ，说明你们双方感情未来的走向与当前感情现状 大体一致，不会有太多变化。
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fit-xingge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-xingge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-xingge-header card-text-header">
+                    结婚禁忌提醒
+                </div>
+                <div class="fit-jinji-list">
+                    <div class="fit-jinji-item">
+                        <span>一、婚嫁择日的禁忌</span>
+                        <div>
+                            1、在挑选结婚吉日的时候不能选择3、7、9月，因为3月包含清明，7月包含盂兰，9月包含重公，这几个日子在中国都是属于“鬼节”，因此不适合结婚。
+                        </div>
+                        <div>
+                            2、每个月的初三、初七、十三、十八、廿二、廿七是传说中三娘煞的日子，这几天三娘会专门破坏新人结婚，因此也不能选。
+                        </div>
+                        <div>
+                            3、选择的结婚吉日不能和新郎新娘的父母生辰相重合。
+                        </div>
+                        <div>
+                            4、选择的结婚吉日不能和新郎新娘的属相冲突
+                        </div>
+                    </div>
+                    <div class="fit-jinji-item">
+                        <span>二、订婚时的禁忌</span>
+                        <div>
+                            1、订婚的时候双方一定不能说不吉利的话，例如“再见”“顺走”等等，因为这代表着新郎新娘可能会有再婚的情况，十分不吉利。
+                        </div>
+                        <div>
+                            2、订婚的时候不能将雨伞和扇子带进婚宴场地，因为其代表的是“分散”的寓意。
+                        </div>
+                        <div>
+                            3、男方送聘礼的时候数目切忌不能是单数，结婚习俗中双数有着好事成双的含义，而单数是不吉利的象征。
+                        </div>
+                    </div>
+                    <div class="fit-jinji-item">
+                        <span>三、婚前准备的禁忌</span>
+                        <div>
+                            1、婚礼场地选择不能在法院、检察院、警察局、医院等附近，因为这些地方是非多不吉祥。
+                        </div>
+                        <div>
+                            2、婚礼场地的大门不能朝北和朝西开，因为背阳阴气非常重。
+                        </div>
+                        <div>
+                            3、在婚礼前一天，新郎不可一个人单独睡新的婚床，这样有婚后独孤的寓意，因此要选择一名男童晚上陪同。
+                        </div>
+                    </div>
+                    <div class="fit-jinji-item">
+                        <span>四、结婚当天的禁忌</span>
+                        <div>
+                            1、男方去接亲的时候，姑姑和姨不能随同。因此姑谐音“孤”，姨谐音“疑”，寓意不吉利。
+                        </div>
+                        <div>
+                            2、新娘结婚当天的衣服不能是带有口袋的，因为这会带走娘子的财运。
+                        </div>
+                        <div>
+                            3、新娘在接亲离开娘家的时候不能不哭，哭的越厉害以后才会越来越有钱。
+                        </div>
+                        <div>
+                            4、结婚当天无论新娘新郎有多累都不能躺下，不然会有常年生病的寓意。
+                        </div>
+                        <div>
+                            5、新娘进男方家门的时候对于门槛一定是要跨过去而不是踩上去。
+                        </div>
+                        <div>
+                            6、新郎在婚礼当天送去的喜饼都是给宾客的，新郎新娘是不能吃的，自己吃掉喜气是不吉利的。
+                        </div>
+                        <div class="fit-jinji-message">
+                            以上就是结婚禁忌讲究的全部内容了，不同的地 方虽然会有一些额外的禁忌，但是大体上都是一 样的。相信只要你做好万全的婚前准备，那么一 定能够举办一场不留遗憾的婚礼的!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fit-xingge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-xingge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-xingge-header card-text-header">
+                    你的财运指数（赠）
+                </div>
+                <div class="fit-caiyun-list">
+                    <div>
+                        在这个卦象中，本卦可看出你的当前财运，本卦为山风蛊卦 。
+                    </div>
+                    <div class="fit-caiyun-item">
+                        <span class="fit-caiyun-item-title">表现为当前的工作事业：</span>
+                        <span>
+                            运气处于不佳状态，或因外界条件，或因个人因素所致。唯有谨慎分析原因，找出弊端，坚决，大胆，不惜冒险，战胜阻力。这时一要头脑冷静，二要向高明的人请教，必能创造业绩。
+                        </span>
+                    </div>
+                    <div class="fit-caiyun-item">
+                        <span class="fit-caiyun-item-title">你当前的经商状况：</span>
+                        <span>
+                            诸多不利困扰着自己，不宜继续走老路。应全面分析市场动向，当机立断，另外找寻出路。诸多不利困扰着自己，不宜继续走老路。应全面分析市场动向，当机立断，另外找寻出路。
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="fit-xingge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-xingge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-xingge-header card-text-header">
+                    结婚禁忌提醒
+                </div>
+                <div class="fit-jinji-list">
+                    <div class="fit-jinji-item">
+                        <span>一、婚嫁择日的禁忌</span>
+                        <div>
+                            1、在挑选结婚吉日的时候不能选择3、7、9月，因为3月包含清明，7月包含盂兰，9月包含重公，这几个日子在中国都是属于“鬼节”，因此不适合结婚。
+                        </div>
+                        <div>
+                            2、每个月的初三、初七、十三、十八、廿二、廿七是传说中三娘煞的日子，这几天三娘会专门破坏新人结婚，因此也不能选。
+                        </div>
+                        <div>
+                            3、选择的结婚吉日不能和新郎新娘的父母生辰相重合。
+                        </div>
+                        <div>
+                            4、选择的结婚吉日不能和新郎新娘的属相冲突
+                        </div>
+                    </div>
+                    <div class="fit-jinji-item">
+                        <span>二、订婚时的禁忌</span>
+                        <div>
+                            1、订婚的时候双方一定不能说不吉利的话，例如“再见”“顺走”等等，因为这代表着新郎新娘可能会有再婚的情况，十分不吉利。
+                        </div>
+                        <div>
+                            2、订婚的时候不能将雨伞和扇子带进婚宴场地，因为其代表的是“分散”的寓意。
+                        </div>
+                        <div>
+                            3、男方送聘礼的时候数目切忌不能是单数，结婚习俗中双数有着好事成双的含义，而单数是不吉利的象征。
+                        </div>
+                    </div>
+                    <div class="fit-jinji-item">
+                        <span>三、婚前准备的禁忌</span>
+                        <div>
+                            1、婚礼场地选择不能在法院、检察院、警察局、医院等附近，因为这些地方是非多不吉祥。
+                        </div>
+                        <div>
+                            2、婚礼场地的大门不能朝北和朝西开，因为背阳阴气非常重。
+                        </div>
+                        <div>
+                            3、在婚礼前一天，新郎不可一个人单独睡新的婚床，这样有婚后独孤的寓意，因此要选择一名男童晚上陪同。
+                        </div>
+                    </div>
+                    <div class="fit-jinji-item">
+                        <span>四、结婚当天的禁忌</span>
+                        <div>
+                            1、男方去接亲的时候，姑姑和姨不能随同。因此姑谐音“孤”，姨谐音“疑”，寓意不吉利。
+                        </div>
+                        <div>
+                            2、新娘结婚当天的衣服不能是带有口袋的，因为这会带走娘子的财运。
+                        </div>
+                        <div>
+                            3、新娘在接亲离开娘家的时候不能不哭，哭的越厉害以后才会越来越有钱。
+                        </div>
+                        <div>
+                            4、结婚当天无论新娘新郎有多累都不能躺下，不然会有常年生病的寓意。
+                        </div>
+                        <div>
+                            5、新娘进男方家门的时候对于门槛一定是要跨过去而不是踩上去。
+                        </div>
+                        <div>
+                            6、新郎在婚礼当天送去的喜饼都是给宾客的，新郎新娘是不能吃的，自己吃掉喜气是不吉利的。
+                        </div>
+                        <div class="fit-jinji-message">
+                            以上就是结婚禁忌讲究的全部内容了，不同的地 方虽然会有一些额外的禁忌，但是大体上都是一 样的。相信只要你做好万全的婚前准备，那么一 定能够举办一场不留遗憾的婚礼的!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="fit-xingge card-border-bg" style="padding-bottom: 0">
+                <img class="fit-xingge-img-content card-img-header" src="./statics/peidui/flower-content.png" alt="">
+                <div class="fit-xingge-header card-text-header">
+                    双方婚后生活
+                </div>
+                <div class="fit-hunhou-list">
+                    <div class="fit-hunhou-item">
+                        <span>婚姻格言</span>
+                        <div>
+                            1、婚姻就是把爱情落实到生活里，睁开一只眼看清楚对方的优点，闭上一只眼无视对方的缺点。在婚姻中学着做个合适的人，而不是去找个合适的人。
+                        </div>
+                        <div>
+                            2、夫妻相处之道是重视及感谢对方所做的一切不要凡事视为当然。
+                        </div>
+                        <div>
+                            3、能有智慧建立一个温馨美满家庭的人，才算是一个真正成功的人。
+                        </div>
+                        <div>
+                            4、没有100分的另一半，只有50分的两个人。
+                        </div>
+                        <div>
+                            5、两个人的幸福需要共同维护才能长久，结果仅供娱乐和参考。
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-over">
+                <span>您已看完报告所有内容，如果还有其他疑问</span>
+                <span>可添加老师微信继续咨询哦~</span>
+            </div>
+            <div class="content-humen">
+                <img src="./statics/peidui/humen.png" alt="">
+            </div>
+        </div>
+        <div class="popular-share">
+            热门推荐
+        </div>
+        <div class="content" style="margin-bottom:4rem">
+            <div class="card-list">
+                <div class="card-item">
+                    <img src="./statics/peidui/eight.png" alt="">
+                </div>
+                <div class="card-item">
+                    <img src="./statics/peidui/tiger.png" alt="">
+                </div>
+                <div class="card-item">
+                    <img src="./statics/peidui/no.png" alt="">
+                </div>
+            </div>
+            <div class="content-humen">
+                <img src="./statics/peidui/humen.png" alt="">
+            </div>
+        </div>
+        <div class="content" style="padding: 0">
+            <div class="footer-list-btn">
+                <a class="footer-list-more-test">更多测试</a>
+                <div class="footer-list-test-me">
+                    <img src="./statics/peidui/hart.png" alt="">
+                    测算我的婚姻运势
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="protocol_pop_box" id="protocolPopBox" style="display: block;">
+        <div class="ppb_content">
+            <div class="ppb_title">
+                个人隐私协议
+            </div>
+            <div class="ppb_text">
+                <p>
+                    尊敬的用户，欢迎阅读本协议：
+                </p>
+                <p>
+                    依据本协议的规定提供服务，本协议具有合同效力。您必须完全同意以下所有条款，才能保证享受到更好的汇丰科技服务。您使用服务的行为将视为对本协议的接受，并同意接受本协议各项条款的约束。
+                </p>
+                <p>
+                    用户在申请服务过程中，需要填写一些必要的个人信息，为了更好的为用户服务，请保证提供的这些个人信息的真实、准确、合法、有效并注意及时更新。<strong>若因填写的信息不完整或不准确，则可能无法使用本服务或在使用过程中受到限制。如因用户提供的个人资料不实或不准确，给用户自身造成任何性质的损失，均由用户自行承担。</strong>
+                </p>
+                <p>
+                    保护用户个人信息是汇丰科技的一项基本原则，汇丰科技运用各种安全技术和程序建立完善的管理制度来保护用户的个人信息，以免遭受未经授权的访问、使用或披露。<strong>未经用户许可汇丰科技不会向第三方（汇丰科技控股或关联、运营合作单位除外）公开、透露用户个人信息，但由于政府要求、法律政策需要等原因除外。</strong>
+                </p>
+                <p>
+                    在用户发送信息的过程中和本网站收到信息后，<strong>本网站将遵守行业通用的标准来保护用户的私人信息。但是任何通过因特网发送的信息或电子版本的存储方式都无法确保100%的安全性。因此，本网站会尽力使用商业上可接受的方式来保护用户的个人信息，但不对用户信息的安全作任何担保。</strong>
+                </p>
+                <p>
+                    此外，您已知悉并同意：<strong>在现行法律法规允许的范围内，汇丰科技可能会将您非隐私的个人信息用于市场营销，使用方式包括但不限于：在网页或者app平台中向您展示或提供广告和促销资料，向您通告或推荐服务或产品信息，使用电子邮件，短信等方式推送其他此类根据您使用汇丰科技服务或产品的情况所认为您可能会感兴趣的信息。</strong>
+                </p>
+                <p>
+                    本网站有权在必要时修改服务条例，<strong>本网站的服务条例一旦发生变动，将会在本网站的重要页面上提示修改内容，用户如不同意新的修改内容，须立即停止使用本协议约定的服务，否则视为用户完全同意并接受新的修改内容。</strong>根据客观情况及经营方针的变化，本网站有中断或停止服务的权利，用户对此表示理解并完全认同。
+                </p>
+                <p>
+                    如果您还有其他问题和建议，可以通过电子邮件52623867@qq.com或者电话000-0000000联系我们。
+                </p>
+                <p>
+                    保留对本协议的最终解释权。
+                </p>
+            </div>
+            <div class="ppb_close" id="protocolHideBtn">
+                <b>关闭</b>
+            </div>
+        </div>
+    </div>
+    <script src="./statics/js/jquery.min.js"></script>
+    <script>
+        let protocolHideBtn = document.getElementById("protocolHideBtn");
+        let showModule = document.getElementById("showModule");
+        protocolHideBtn.addEventListener("click", (e) => {
+            let protocolPopBox = document.getElementById("protocolPopBox");
+            protocolPopBox.style.display = "none";
+        })
+        showModule.addEventListener("click", (e) => {
+            let protocolPopBox = document.getElementById("protocolPopBox");
+            protocolPopBox.style.display = "block";
+        })
+    </script>
+    <script>
+        let width
+        if (window.screen.width > 750) {
+            width = 75
+        } else {
+            width = window.screen.width / 10;
+        }
+        let html = document.querySelector("html");
+        html.style.fontSize = width + "px";
+
+        let watchWindowSize = (e) => {
+            let html = document.querySelector("html");
+            let screenWidth = e.currentTarget.screen.width;
+            let rem
+            if (screenWidth > 750) {
+                rem = 75
+            } else {
+                rem = screenWidth / 10;
+            }
+            console.log(rem, 'rem')
+            html.style.fontSize = rem + "px";
+        };
+
+        window.addEventListener("resize", watchWindowSize);
+    </script>
+</body>
+</html>
