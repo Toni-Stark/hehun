@@ -558,6 +558,49 @@
                 margin-left: 10px;
                 font-size: .2224rem;
             }
+            /*姓氏名字样式*/
+            .name-form {
+                font-size: .34rem;
+                font-weight: 600;
+                margin: .2rem 0;
+            }
+            .name-form-name {
+                white-space: nowrap;
+                align-items: center;
+                display: flex;
+                font-size: .45rem;
+                font-weight: 400;
+                color: #5e5c5a;
+                padding: 0 0 0 0.3rem;
+            }
+            .name-form-content {
+                display: flex;
+                width: 100%;
+                background: #fff;
+                border: 1px solid #c4beb4;
+                border-radius: 0.15rem;
+            }
+            .name-form-img img{
+                width: 1.2rem;
+                display: flex;
+            }
+            .name-form-input {
+                display: flex;
+                width: 100%;
+                align-items: center;
+                font-size: .45rem;
+                color: #828180;
+                font-weight: 400;
+                white-space: nowrap;
+            }
+            .name-form-input input {
+                display: flex;
+                width: 100%;
+                height: 100%;
+                box-sizing: border-box;
+                padding-left: 0.2rem;
+                color: #000000;
+            }
         </style>
     </head>
 
@@ -571,6 +614,56 @@
                 <div class="header" id="agentTitle"></div>
             </div>
             <div>
+                <!-- ↓新加姓氏名字输入框↓ -->
+                <section>
+                    <div class="name-form">
+                        <div class="name-form-content">
+                            <div class="name-form-img">
+                                <img src="./statics/img/WechatIMG457.png" alt="">
+                            </div>
+                            <div class="name-form-name">男方 </div>
+                            <div class="name-form-input" style="padding-left: 0.4rem;">
+                                <div>姓氏:</div>
+                                <input
+                                    type="text"
+                                    name="username"
+                                    placeholder=""
+                                >
+                            </div>
+                            <div class="name-form-input" style="padding-right: 0.4rem;">
+                                <div>名字:</div>
+                                <input
+                                    type="text"
+                                    name="username"
+                                    placeholder=""
+                                >
+                            </div>
+                        </div>
+                    </div>
+                    <div class="name-form">
+                        <div class="name-form-content">
+                            <div class="name-form-img">
+                                <img src="./statics/img/WechatIMG459.png" alt="">
+                            </div>
+                            <div class="name-form-name">女方</div>
+                            <div class="name-form-input" style="padding-left: 0.4rem;">
+                                <div>姓氏:</div>
+                                <input
+                                    type="text"
+                                    name="username"
+                                >
+                            </div>
+                            <div class="name-form-input" style="padding-right: 0.4rem;">
+                                <div>名字:</div>
+                                <input
+                                    type="text"
+                                    name="username"
+                                >
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- ↑新加姓氏名字输入框↑ -->
                 <section>
                     <p class="text_p" style="margin:.3rem 0">
                         男女配不配 用名字
@@ -959,8 +1052,8 @@
                 <div id="test" class="buttom_anchor animation_scaling"> 立即测试</div>
             </footer>
         </div>
-        <div class="van-overlay" style="z-index: 2001;"></div>
-        <div role="dialog" class="van-dialog" style="z-index: 2002;" aria-labelledby="提示">
+        <div class="van-overlay" style="z-index: 2001;display: none"></div>
+        <div role="dialog" class="van-dialog" style="z-index: 2002;display: none" aria-labelledby="提示">
             <div class="van-dialog__header">提示</div>
             <div class="van-dialog__content">
                 <div class="van-dialog__message van-dialog__message--has-title">
@@ -980,7 +1073,7 @@
                 </button>
             </div>
         </div>
-        <div class="protocol_pop_box" id="protocolPopBox" style="display: block;">
+        <div class="protocol_pop_box" id="protocolPopBox" style="display: none;">
             <div class="ppb_content">
                 <div class="ppb_title">
                     个人隐私协议
